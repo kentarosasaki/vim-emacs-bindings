@@ -13,7 +13,7 @@ function! s:home()
   let start_column = col('.')
   normal! ^
   if col('.') == start_column
-  ¦ normal! 0
+    normal! 0
   endif
   return ''
 endfunction
@@ -21,9 +21,9 @@ endfunction
 function! s:kill()
   let [text_before, text_after] = s:split_line()
   if len(text_after) == 0
-  ¦ normal! J
+    normal! J
   else
-  ¦ call setline(line('.'), text_before)
+    call setline(line('.'), text_before)
   endif
   return ''
 endfunction
